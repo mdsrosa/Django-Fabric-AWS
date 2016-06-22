@@ -41,6 +41,9 @@ fabconf['APPS_DIR'] = "/home/%s/webapps" % fabconf['SERVER_USERNAME']
 # Where you want your project installed: /APPS_DIR/PROJECT_NAME
 fabconf['PROJECT_PATH'] = "%s/%s" % (fabconf['APPS_DIR'], fabconf['PROJECT_NAME'])
 
+# Your Django's version "run migrations" command
+fabconf['RUN_MIGRATIONS_CMD'] = "python %s/manage.py syncdb" % fabconf['PROJECT_PATH']
+
 # App domains
 fabconf['DOMAINS'] = "example.com www.example.com"
 
